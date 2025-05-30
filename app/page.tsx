@@ -60,7 +60,7 @@ export default function Home() {
  
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [selectedCertificate, setSelectedCertificate] = useState<string | null>(null);
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const openModal = (imageSrc: string) => setSelectedCertificate(imageSrc);
   const closeModal = () => setSelectedCertificate(null);
