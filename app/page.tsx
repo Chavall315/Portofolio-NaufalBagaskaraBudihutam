@@ -428,7 +428,7 @@ export default function Home() {
               <a href="https://github.com/Chavall315" target="_blank" rel="noopener noreferrer" className="hover:text-black dark:hover:text-white transition">
                 <FaGithub />
               </a>
-              <a href="https://instagram.com/usernamekamu" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 transition">
+              <a href="https://www.instagram.com/_chaval315/" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 transition">
                 <FaInstagram />
               </a>
               <a href="https://wa.me/628158949179" target="_blank" rel="noopener noreferrer" className="hover:text-green-500 transition">
