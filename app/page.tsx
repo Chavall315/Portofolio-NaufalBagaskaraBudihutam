@@ -206,17 +206,23 @@ export default function Portfolio() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center px-6 pt-20">
-        <div className="max-w-7xl w-full grid md:grid-cols-2 gap-12 items-center">
+      <section id="home" className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden">
+        {/* Floating particles background */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-float" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-float-delayed" />
+        </div>
+        
+        <div className="max-w-7xl w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
           <div className="space-y-6 animate-fade-in">
             <div className="space-y-2">
-              <p className="text-blue-400 text-lg">Hai, Saya</p>
-              <h1 className="text-5xl md:text-7xl font-bold">
+              <p className="text-blue-400 text-lg animate-slide-up">Hai, Saya</p>
+              <h1 className="text-5xl md:text-7xl font-bold animate-slide-up-delayed">
                 <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent animate-gradient">
                   Naufal Bagaskara
                 </span>
               </h1>
-              <p className="text-2xl md:text-3xl text-gray-300">Web Developer</p>
+              <p className="text-2xl md:text-3xl text-gray-300 animate-slide-up-delayed-2">Web Developer</p>
             </div>
             <p className="text-gray-400 text-lg leading-relaxed">
               Selamat datang di portfolio saya! Ini adalah tempat saya menampilkan proyek, keahlian, dan perjalanan saya dalam dunia pengembangan web. Silakan jelajahi dan temukan karya terbaik saya!
@@ -236,11 +242,12 @@ export default function Portfolio() {
               </a>
             </div>
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-center animate-fade-in-delayed">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full blur-2xl opacity-50 animate-pulse" />
-              <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-blue-500/50 shadow-2xl shadow-blue-500/50">
-                <img src="/profil.jpg" alt="" className="w-full"/>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full blur-2xl opacity-50 animate-pulse-slow" />
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full blur-2xl opacity-20 animate-spin-slow" />
+              <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-blue-500/50 shadow-2xl shadow-blue-500/50 transition-transform duration-500">
+                <img src="/profil.jpg" alt="" className="w-full transition-transform duration-700"/>
               </div>
             </div>
           </div>
@@ -268,7 +275,7 @@ export default function Portfolio() {
             </div>
             
             <div className="space-y-6">
-              <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-3xl border border-gray-700/30 backdrop-blur-sm hover:border-gray-600/60 transition-all duration-300">
+              <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-3xl border border-gray-700/30 backdrop-blur-sm hover:border-gray-600/60 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl hover:shadow-blue-500/10">
                 <p className="text-gray-300 leading-relaxed text-lg">
                   Hai semuanya! Nama saya <span className="text-blue-400 font-semibold">Naufal Bagaskara Budihutama</span>. Saya seorang pelajar dan juga web developer dari Bogor, Jawa Barat.
                 </p>
@@ -278,13 +285,13 @@ export default function Portfolio() {
               </div>
               
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gradient-to-br from-blue-900/30 to-transparent p-6 rounded-2xl border border-blue-500/20">
-                  <p className="text-3xl font-bold text-blue-400">2</p>
+                <div className="bg-gradient-to-br from-blue-900/30 to-transparent p-6 rounded-2xl border border-blue-500/20 hover:border-blue-500/60 transition-all duration-300 hover:translate-y-[-4px] group">
+                  <p className="text-3xl font-bold text-blue-400 group-hover:scale-110 transition-transform duration-300">2</p>
                   <p className="text-gray-400 mt-2">Tahun Pengalaman</p>
                 </div>
-                <div className="bg-gradient-to-br from-cyan-900/30 to-transparent p-6 rounded-2xl border border-cyan-500/20">
-                  <p className="text-3xl font-bold text-cyan-400">6+</p>
-                  <p className="text-gray-400 mt-2">Project Dilakukan</p>
+                <div className="bg-gradient-to-br from-cyan-900/30 to-transparent p-6 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/60 transition-all duration-300 hover:translate-y-[-4px] group">
+                  <p className="text-3xl font-bold text-cyan-400 group-hover:scale-110 transition-transform duration-300">6+</p>
+                  <p className="text-gray-400 mt-2">Project Selesai</p>
                 </div>
               </div>
             </div>
@@ -418,7 +425,7 @@ export default function Portfolio() {
                     <img 
                       src={cert.garsi} 
                       alt={cert.title}
-                      className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" 
+                      className="w-full h-full object-cover object-center transition-transform duration-500" 
                       />
                   </div>
                 </div>
@@ -439,7 +446,6 @@ export default function Portfolio() {
       <footer className="py-16 px-6 border-t border-gray-700/20">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-            {/* Brand */}
             <div className="space-y-4">
               <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Naufal Bagaskara
@@ -449,7 +455,6 @@ export default function Portfolio() {
               </p>
             </div>
 
-            {/* Contact */}
             <div className="space-y-4">
               <h4 className="text-lg font-semibold text-white">Kontak</h4>
               <div className="space-y-3 text-gray-400 text-sm">
@@ -468,7 +473,6 @@ export default function Portfolio() {
               </div>
             </div>
 
-            {/* Quick Links */}
             <div className="space-y-4">
               <h4 className="text-lg font-semibold text-white">Quick Links</h4>
               <div className="space-y-2">
@@ -484,7 +488,6 @@ export default function Portfolio() {
               </div>
             </div>
 
-            {/* Social */}
             <div className="space-y-4">
               <h4 className="text-lg font-semibold text-white">Follow Me</h4>
               <div className="flex gap-4">
@@ -526,33 +529,10 @@ export default function Portfolio() {
         </div>
       </footer>
 
-      {/* Modal */}
-      {selectedCertificate && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
-          onClick={() => setSelectedCertificate(null)}
-        >
-          <div className="relative max-w-4xl w-full bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-gray-700/30 p-4">
-            <button
-              onClick={() => setSelectedCertificate(null)}
-              className="absolute -top-4 -right-4 w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 flex items-center justify-center hover:scale-110 transition-transform"
-            >
-              <X className="w-6 h-6" />
-            </button>
-            <div className="aspect-video bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-xl flex items-center justify-center">
-              <img
-                src={selectedCertificate}
-                alt="Full view"
-                className="w-full h-auto rounded-2xl border border-gray-700/30 shadow-2xl"
-              />
-            </div>
-          </div>
-        </div>
-      )}
-
+      {/* Modal untuk gambar */}
       {selectedImage && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 animate-fade-in"
           onClick={() => setSelectedImage(null)}
         >
           <div className="relative max-w-4xl w-full">
@@ -592,6 +572,67 @@ export default function Portfolio() {
         }
         .animate-fade-in {
           animation: fade-in 1s ease-out;
+        }
+        .animate-fade-in-delayed {
+          animation: fade-in 1s ease-out 0.3s backwards;
+        }
+        @keyframes slide-up {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-slide-up {
+          animation: slide-up 0.8s ease-out;
+        }
+        .animate-slide-up-delayed {
+          animation: slide-up 0.8s ease-out 0.2s backwards;
+        }
+        .animate-slide-up-delayed-2 {
+          animation: slide-up 0.8s ease-out 0.4s backwards;
+        }
+        @keyframes float {
+          0%, 100% {
+            transform: translate(0, 0) scale(1);
+          }
+          33% {
+            transform: translate(30px, -30px) scale(1.1);
+          }
+          66% {
+            transform: translate(-20px, 20px) scale(0.9);
+          }
+        }
+        .animate-float {
+          animation: float 20s ease-in-out infinite;
+        }
+        .animate-float-delayed {
+          animation: float 25s ease-in-out infinite 5s;
+        }
+        @keyframes pulse-slow {
+          0%, 100% {
+            opacity: 0.5;
+          }
+          50% {
+            opacity: 0.8;
+          }
+        }
+        .animate-pulse-slow {
+          animation: pulse-slow 4s ease-in-out infinite;
+        }
+        @keyframes spin-slow {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+        .animate-spin-slow {
+          animation: spin-slow 20s linear infinite;
         }
       `}</style>
       <style jsx global>{`
