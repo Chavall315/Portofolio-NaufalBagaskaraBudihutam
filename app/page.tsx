@@ -493,10 +493,10 @@ export default function Portfolio() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                GitHub Projects
+                Portofolio
               </span>
             </h2>
-            <p className="text-gray-400 text-lg">Repository terbaru dari GitHub saya</p>
+            <p className="text-gray-400 text-lg">Ini adalah project-project yang pernah saya kerjakan</p>
             <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto rounded-full mt-4" />
           </div>
 
