@@ -2,8 +2,6 @@
 import { useEffect, useState } from "react";
 import { User, Code, Briefcase, Award, Mail, MapPin, Github, Instagram, MessageCircle, Home, ChevronRight, ExternalLink, X, Linkedin } from "lucide-react";
 import dynamic from "next/dynamic";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
@@ -139,13 +137,23 @@ export default function Portfolio() {
 
   const certificates = [
     {
-      garsi: "/sertifikat1.jpeg",
+      garsi: "/sertikom1_page-0001.jpg",
       title: "Web Development Dasar",
       desc: "Menyelesaikan pelatihan pengembangan web dasar menggunakan HTML, CSS, dan JavaScript.",
     },
     {
-      garsi: "/sertifikat2.jpeg",
+      garsi: "/sertikom2_page-0001 (1).jpg",
+      title: "Web Developer (Laravel)",
+      desc: "Berhasil membangun aplikasi CRUD lengkap menggunakan Laravel dan Vue.js dalam program pelatihan intensif.",
+    },
+    {
+      garsi: "/sertikom3_page-0001 (1).jpg",
       title: "Fullstack Developer",
+      desc: "Berhasil membangun aplikasi CRUD lengkap menggunakan Laravel dan Vue.js dalam program pelatihan intensif.",
+    },
+    {
+      garsi: "/sertifikat bnsp.jpg",
+      title: "Junior Web Developer",
       desc: "Berhasil membangun aplikasi CRUD lengkap menggunakan Laravel dan Vue.js dalam program pelatihan intensif.",
     },
   ];
@@ -601,6 +609,22 @@ export default function Portfolio() {
           </Slider>
         </div>
       </section>
+
+      <div className="mt-10 text-center">
+        <a
+          href="https://github.com/Chavall315"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-6 py-3
+            rounded-xl border border-gray-700
+            text-gray-400 hover:text-white
+            hover:border-blue-500
+            transition"
+        >
+          Lihat lebih banyak di GitHub
+          <ExternalLink className="w-4 h-4" />
+        </a>
+      </div>
 
       {/* Certificates Section */}
       <section id="sertifikat" className="py-20 px-6 bg-gradient-to-b from-transparent via-gray-900/50 to-transparent">
