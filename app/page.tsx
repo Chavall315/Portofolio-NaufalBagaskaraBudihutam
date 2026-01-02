@@ -274,7 +274,7 @@ export default function Portfolio() {
             </p>
             <div className="flex gap-4 pt-4">
               <a
-                href="#portfolio"
+                href="#github"
                 className="px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105"
               >
                 Lihat Portfolio
@@ -368,7 +368,7 @@ export default function Portfolio() {
               <div className="relative">
                 <div className="relative w-full aspect-square rounded-3xl overflow-hidden border-2 border-gray-700/30 group-hover:border-blue-500/50 transition-all duration-500 shadow-2xl shadow-blue-500/20">
                   <img 
-                    src="/profilcer.jpg" 
+                    src="/keceei.jpg" 
                     alt="Naufal Bagaskara" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
@@ -610,7 +610,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <div className="mt-10 text-center">
+      <div className="mt-6 text-center">
         <a
           href="https://github.com/Chavall315"
           target="_blank"
